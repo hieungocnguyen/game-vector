@@ -1,0 +1,120 @@
+.container {
+  background-image: url(../public/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.lixi {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  /* animation: lixi-animation 4s cubic-bezier(0.075, 0.82, 0.165, 1) infinite; */
+}
+
+.shake {
+  animation: shake 4s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+}
+
+.zoom {
+  animation: zoom 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.stand {
+  bottom: -300px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-100%) rotate(-15deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  75% {
+    transform: translateX(0%) rotate(15deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    bottom: -80px;
+  }
+  100% {
+    bottom: -300px;
+  }
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 400px;
+  height: 300px;
+  perspective: 1000px;
+  position: absolute;
+  left: 50%;
+  top: 140%;
+  transform: translate(-50%, -70%);
+}
+
+.appear {
+  top: 50%;
+  animation: appear 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes appear {
+  0% {
+    top: 140%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+}
+
+.flip-box-inner.openCard {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.flip-box-front {
+  background-color: #eabd68;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #c62d2f;
+  color: white;
+  transform: rotateY(180deg);
+}
