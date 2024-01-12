@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^10.18.0",
+    "html-to-image": "^1.11.11",
     "preact": "^10.19.3"
   },
   "devDependencies": {

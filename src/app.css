@@ -10,10 +10,10 @@
 
 .lixi {
   position: absolute;
-  bottom: -80px;
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
+  width: 300px;
   /* animation: lixi-animation 4s cubic-bezier(0.075, 0.82, 0.165, 1) infinite; */
 }
 
@@ -26,7 +26,7 @@
 }
 
 .stand {
-  bottom: -300px;
+  bottom: -200px;
 }
 
 @keyframes shake {
@@ -49,16 +49,16 @@
 
 @keyframes zoom {
   0% {
-    bottom: -80px;
+    bottom: -50px;
   }
   100% {
-    bottom: -300px;
+    bottom: -200px;
   }
 }
 
 .flip-box {
   background-color: transparent;
-  width: 400px;
+  width: 300px;
   height: 300px;
   perspective: 1000px;
   position: absolute;
@@ -104,17 +104,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
-  overflow: hidden;
 }
 
 .flip-box-front {
   background-color: #eabd68;
   color: black;
+  cursor: pointer;
 }
 
 .flip-box-back {
-  background-color: #c62d2f;
-  color: white;
+  background-image: url("https://res.cloudinary.com/ngnohieu/image/upload/v1705030950/tet-themeAsset_3_mvl0rp.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  /* background-color: #c62d2f; */
+  color: #eabd68;
   transform: rotateY(180deg);
+}
+
+.button-download {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: crimson;
+  cursor: pointer;
+  font-weight: 700;
+  animation: show 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
